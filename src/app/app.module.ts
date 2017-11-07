@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
 
+import { MaterializeModule } from 'angular2-materialize';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +17,8 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
+    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
+    MaterializeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
